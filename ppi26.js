@@ -159,7 +159,7 @@ console.log(numeros.toSorted((a, b) => b - a));
 
 numeros.sort((a, b) => a - b);
 // Maior Valor
-console
+console.log(numeros[numeros.length - 1]);
 
 // Menor Valor
 console.log(numeros[0]);
