@@ -8,15 +8,15 @@ console.log('Bem-vindos a PPI');
 
 
 // Variáveis
-let nome = 'Guilherme';
-let idade = 17;
-let altura = 1.75;
-let estudante = true;
+// let nome = 'Guilherme';
+// let idade = 17;
+// let altura = 1.75;
+// let estudante = true;
 
-console.log('Nome:', nome);
-console.log('Idade:', idade);
-console.log('Altura:', altura);
-console.log('Estudante:', estudante);
+// console.log('Nome:', nome);
+// console.log('Idade:', idade);
+// console.log('Altura:', altura);
+// console.log('Estudante:', estudante);
 
 // Constantes não podem mudar de valor
 const PI = 3.14;
@@ -165,6 +165,8 @@ console.log(numeros[numeros.length - 1]);
 console.log(numeros[0]);
 
 // Aula 13/05 - Funções, array destructuring, spread operator
+const numbers = numeros;
+const fruits = frutas;
 console.log(fruits);
 
 const fruits2 = ["Kiwi", "Avocado"];
@@ -233,3 +235,54 @@ const pessoa = {
 
 console.log(pessoa.nome);
 console.log(pessoa['nome']);
+console.log(Object.keys(pessoa)); // Retorna um array com as chaves do objeto
+console.log(Object.values(pessoa));
+
+const pessoa2 = { ...pessoa, hobby: 'Vaqueijada' };
+console.log(pessoa2);
+
+const { nome, idade } = pessoa2;
+console.log(nome, idade);
+
+// Construtor de objetos
+function Product(name, sto, ram, price, qty, category) {
+  this.name = name;
+  this.stock = sto;
+  this.ram = ram;
+  this.price = price;
+  this.qty = qty;
+  this.category = category;
+}
+
+const p1 = new Product('Iphone', 256, 16, 5000, 10, 'Smartphone');
+const p2 = new Product('Notebook', 512, 32, 8000, 5, 'Computador');
+const p3 = new Product('Tablet', 128, 8, 3000, 20, 'Tablet');
+const p4 = new Product('Smartwatch', 64, 4, 1500, 15, 'Smartwatch');
+const p5 = new Product('Headphone', 32, 2, 500, 30, 'Acessório');
+const p6 = new Product('Monitor', 256, 16, 2000, 8, 'Monitor');
+
+const estoque = [ 
+  {...p1},
+  {...p2},
+  {...p3},
+  {...p4},
+  {...p5},
+  {...p6},
+ ];
+console.log(estoque);
+
+/*
+
+a) Valor total de todos os produtos em estoque
+b) Ordene os produtos por nome (crescente/decrescente)
+c) Ordene os produtos por preço (crescente/decrescente)
+d) Filtre os produtos de acordo uma categoria
+
+*/
+
+console.log(
+  estoque.reduce((soma, product) => soma + ( product.price * product.qty) , 0 )
+);
+
+
+
