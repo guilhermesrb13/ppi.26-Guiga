@@ -280,9 +280,34 @@ d) Filtre os produtos de acordo uma categoria
 
 */
 
+
+// Letra A)
 console.log(
   estoque.reduce((soma, product) => soma + ( product.price * product.qty) , 0 )
 );
 
+// Letra B)
+console.log('=====PRODUTOS CRES/DESC=====');
+const crescente = [...estoque].sort((a, b) => a.name.localeCompare(b.name));
+crescente.forEach(function(p) {
+  console.log(p.name);
+});
+console.log('==========')
+const decrescente = [...estoque].sort((a, b) => b.name.localeCompare(a.name));
+decrescente.forEach(function(p) {
+  console.log(p.name);
+});
 
+// Letra C)
+console.log('=====PREÇOS CRES/DESC=====');
+const crescentePreco = [...estoque].sort((a, b) => a.price - b.price);
+crescentePreco.forEach(function(p) {
+  console.log(p.name + ': R$' + p.price);
+});
+console.log('==========')
+const decrescentePreco = [...estoque].sort((a, b) => b.price - a.price);
+decrescentePreco.forEach(function(p) {
+  console.log(p.name + ': R$' + p.price);
+});
 
+// Letra D)
