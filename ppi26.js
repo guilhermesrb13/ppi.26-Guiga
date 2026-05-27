@@ -204,10 +204,10 @@ console.log(outFind);
 
 // filter - retorna TODAS as ocorrências,
 // de acordo com a condição
-let outFilter = fruits3.filter(
-  (fruit) => fruit[0].toLowerCase() === letra
-);
-console.log(outFilter);
+// let outFilter = fruits3.filter(
+//   (fruit) => fruit[0].toLowerCase() === letra
+// );
+// console.log(outFilter);
 
 // DESAFIO - Exibir o valor da soma de todos os
 // números do array 'numbers'
@@ -280,7 +280,7 @@ d) Filtre os produtos de acordo uma categoria
 
 */
 
-
+//Atividade do dia 20/05
 // Letra A)
 console.log(
   estoque.reduce((soma, product) => soma + ( product.price * product.qty) , 0 )
@@ -302,12 +302,29 @@ decrescente.forEach(function(p) {
 console.log('=====PREÇOS CRES/DESC=====');
 const crescentePreco = [...estoque].sort((a, b) => a.price - b.price);
 crescentePreco.forEach(function(p) {
-  console.log(p.name + ': R$' + p.price);
+  console.log(p.name + ' R$' + p.price);
 });
 console.log('==========')
 const decrescentePreco = [...estoque].sort((a, b) => b.price - a.price);
 decrescentePreco.forEach(function(p) {
-  console.log(p.name + ': R$' + p.price);
+  console.log(p.name + ' R$' + p.price);
 });
 
 // Letra D)
+let p1Filtrarcategoria = estoque.filter((p) => p.category === 'Smartphone');
+console.log(p1Filtrarcategoria);
+console.log('==================')
+let p2Filtrarcategoria = estoque.filter((p) => p.category === 'Computador');
+console.log(p2Filtrarcategoria);
+console.log('==================')
+let p3Filtrarcategoria = estoque.filter((p) => p.category === 'Tablet');
+console.log(p3Filtrarcategoria);
+console.log('==================')
+let p4Filtrarcategoria = estoque.filter((p) => p.category === 'Smartwatch');
+console.log(p4Filtrarcategoria);
+console.log('==================')
+let p5Filtrarcategoria = estoque.filter((p) => p.category === 'Acessório');
+console.log(p5Filtrarcategoria);
+console.log('==================')
+let p6Filtrarcategoria = estoque.filter((p) => p.category === 'Monitor');
+console.log(p6Filtrarcategoria);
