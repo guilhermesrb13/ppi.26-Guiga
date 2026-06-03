@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
-          Guiga Dev <span className="heart">♥️</span> React
+          Guiga Dev 😎<span className="heart">♥️</span> React
         </p>
         <p className="small">
           Edit <code>src/App.jsx</code> and save to reload.
